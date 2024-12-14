@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dynamic Table Application
 
-## Getting Started
+A dynamic and interactive table built with React and TypeScript. This application provides advanced functionalities such as column management, data sorting, searching, pagination, file upload, and exporting data in multiple formats (`JSON`, CSV, and `XLSX`).
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+### Core Features
+
+- Dynamic Column Management
+  - Add or remove table columns on the fly.
+- Data Sorting
+  - Sort table rows by column values in ascending or descending order.
+- Search
+  - Perform column-specific searches.
+- Pagination
+  - Navigate data with a user-friendly pagination system.
+- File Upload
+  - Import JSON files to populate the table dynamically.
+- Data Export
+  - Export the table data to:
+    - JSON
+    - CSV
+    - XLSX (Excel format)
+
+### Responsive Design
+
+- The application is optimized for both desktop and mobile devices.
+- Supports dark mode with consistent and aesthetic styles.
+
+---
+
+## Technologies Used
+
+- React: Frontend framework for building the UI.
+- TypeScript: Strongly typed language for robust and maintainable code.
+- FileSaver.js: For exporting table data to files.
+- xlsx: For handling Excel file exports.
+- TailwindCSS: For a clean and responsive UI.
+
+---
+
+## Installation and Setup
+
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+### Steps to Run Locally
+
+1. Clone the repository:
+
+```
+   cd dynamic-table
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+   npm install --legacy-peer-deps
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the development server:
 
-## Learn More
+```
+   npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open in your browser:
+   Visit [http://localhost:4200](http://localhost:4200) to use the application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage Instructions
 
-## Deploy on Vercel
+### Adding a New Column
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Click the "Add Column" button.
+- Enter the column key and label in the prompts.
+- A new column will be added, and all rows will have an empty value for this column.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Removing a Column
+
+- Click the ❌ icon next to the column header.
+- The column and its associated data will be removed from the table.
+
+### Importing Data
+
+- Click the "Choose File" button to upload a JSON file.
+- Ensure the JSON file has an array of objects where each object represents a table row.
+
+### Exporting Data
+
+- Use the "Export JSON", "Export CSV", or "Export XLSX" buttons to download the table data in your desired format.
+
+### Sorting
+
+- Click the ▲ or ▼ icon in the column header to sort data in ascending or descending order.
+
+### Searching
+
+- Use the input boxes in the header to search by specific columns.
+
+### Pagination
+
+- Use the Previous and Next buttons at the bottom of the table to navigate through pages.
